@@ -1,1 +1,1 @@
-[RSSchool landing page (Coffee house)](https://holanad.github.io/rsschool-landing-page)
+[RSSchool landing page (Coffee house)](https://holanad.github.io/rsschool-landing-page/)
