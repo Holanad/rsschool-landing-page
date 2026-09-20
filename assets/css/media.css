@@ -200,18 +200,22 @@
   .menu__title {
     width: 688px;
   }
+  .tabs {
+    /*      &__button {
+            &:hover {
+                background: transparent;
+                .tabs__button-icon {
+                    background: #C1B6AD;
+                }
+                p {
+                    color: #403F3D;
+                }
+            }
+        }*/
+  }
   .tabs-inner {
     width: 660px;
     margin: 0 auto;
-  }
-  .tabs__button:hover {
-    background: transparent;
-  }
-  .tabs__button:hover .tabs__button-icon {
-    background: #C1B6AD;
-  }
-  .tabs__button:hover p {
-    color: #403F3D;
   }
   .footer-social-item:hover {
     background: transparent;
