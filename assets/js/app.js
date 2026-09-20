@@ -47,3 +47,43 @@ const themeSiteSettings = () => {
     switchButton();
 };
 themeSiteSettings();
+
+
+const html = document.querySelector('html');
+
+const headerAdaptive = () => {
+    const headerWrapperElem = document.querySelector('.header-wrapper');
+    const headerMobileElem = document.querySelector('.header-mobile');
+    const headerBlockElem = document.querySelector('.header-block');
+    const headerMenuButtonElem = document.querySelector('.header__menu');
+    const headerBurgerButtonElem = document.querySelector('.header-burger');
+    const headerItemLinkElem = document.querySelectorAll('.header-item__link');
+
+
+    const headerOpenBurger = () => {
+        headerBurgerButtonElem.addEventListener('click', () => {
+            headerMobileElem.classList.toggle('open');
+            headerBurgerButtonElem.classList.toggle('open')
+            if(html.classList.contains('hidden')) {
+                html.classList.remove('hidden');
+            } else {
+                html.classList.add('hidden');
+            }
+        })
+    };
+
+    const headerCloseBurger = () => {
+        headerItemLinkElem.forEach((e) => {
+            e.addEventListener('click', () => {
+                headerMobileElem.classList.remove('open');
+                headerBurgerButtonElem.classList.remove('open');
+                html.classList.remove('hidden');
+            })
+        })
+    };
+
+
+    headerCloseBurger();
+    headerOpenBurger();
+}
+headerAdaptive();
