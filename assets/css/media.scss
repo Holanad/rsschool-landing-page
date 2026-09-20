@@ -70,6 +70,46 @@
         }
         &-burger {
             display: block;
+            span {
+                transition: all .2s linear;
+            }
+            &.open {
+                span {
+                    &:nth-child(1) {
+                        transform: rotate(45deg);
+                        top: 50%;
+                        left: 13px;
+                    }
+                    &:nth-child(2) {
+                        transform: rotate(-45deg);
+                        top: 50%;
+                        bottom: unset;
+                        left: 13px;
+                    }
+                }
+            }
+        }
+        &-item:not(:last-child) {
+            margin-right: 30px;
+        }
+        &-mobile {
+            overflow: auto;
+            background: #E1D4C9;
+            position: fixed;
+            padding: 60px 0;
+            z-index: 3;
+            bottom: 0;
+            align-items: center;
+            width: 100%;
+            height: calc(100% - 100px);
+            display: flex;
+            flex-direction: column;
+            right: -100%;
+            transition: all .3s linear;
+            &.open {
+                right: 0;
+                display: flex;
+            }
         }
         &:hover {
             &::before {

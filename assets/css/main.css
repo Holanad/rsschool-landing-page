@@ -216,6 +216,10 @@ a, span, p, input, button, select, option, textarea, label, blockquote {
   line-height: 150%;
 }
 
+.hidden {
+  overflow: hidden;
+}
+
 body {
   background: #E1D4C9;
 }
@@ -226,6 +230,18 @@ body.darkTheme {
 
 body.darkTheme a, body.darkTheme span, body.darkTheme p, body.darkTheme input, body.darkTheme button, body.darkTheme select, body.darkTheme option, body.darkTheme textarea, body.darkTheme label, body.darkTheme blockquote {
   color: #E1D4C9;
+}
+
+body.darkTheme .header-mobile {
+  background: #292826;
+}
+
+body.darkTheme .header-burger {
+  border: 1px solid #C1B6AD;
+}
+
+body.darkTheme .header-burger span {
+  background: #C1B6AD;
 }
 
 body.darkTheme .header__logo .darkLogo {
@@ -514,6 +530,50 @@ html {
   top: 0;
   opacity: 0;
   z-index: 1;
+}
+
+.header-mobile {
+  display: none;
+}
+
+.header-mobile .header-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 0;
+}
+
+.header-mobile .header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 95px;
+}
+
+.header-mobile .header__menu p {
+  font-size: 32px;
+  font-family: 'Inter SemiBold';
+}
+
+.header-mobile .header__menu svg {
+  width: 40px;
+  height: 40px;
+}
+
+.header-mobile .header-list {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.header-mobile .header-item:not(:last-child) {
+  margin-right: 0;
+  margin-bottom: 50px;
+}
+
+.header-mobile .header-item a {
+  font-size: 32px;
 }
 
 .header-block {

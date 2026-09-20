@@ -2,11 +2,15 @@
 @import 'fonts.scss';
 @import 'normalize.scss';
 
+
 a, span, p, input, button, select, option,textarea, label, blockquote {
     color: #403F3D;
     font-family: 'Inter Medium';
     font-size: 16px;
     line-height: 150%;
+}
+.hidden {
+    overflow: hidden;
 }
 body {
     background: #E1D4C9;
@@ -14,6 +18,15 @@ body {
         background: #292826;
         a, span, p, input, button, select, option, textarea, label, blockquote {
             color: #E1D4C9;
+        }
+        .header-mobile {
+            background: #292826;
+        }
+        .header-burger {
+            border: 1px solid #C1B6AD;
+            span {
+                background: #C1B6AD;
+            }
         }
         .header__logo .darkLogo {
             opacity: 1;
@@ -225,6 +238,37 @@ html {
                 top: 0;
                 opacity: 0;
                 z-index: 1;
+            }
+        }
+    }
+    &-mobile {
+        display: none;
+        .header-block {
+            display: flex;
+            margin-left: 0;
+        }
+        .header__menu {
+            display: flex;
+            margin-top: 95px;
+            p {
+                font-size: 32px;
+                    font-family: 'Inter SemiBold';
+            }
+            svg {
+                width: 40px;
+                height: 40px;
+            }
+        }
+        .header-list {
+            flex-direction: column;
+        }
+        .header-item {
+            &:not(:last-child) {
+                margin-right: 0;
+                margin-bottom: 50px;
+            }
+            a {
+                font-size: 32px;
             }
         }
     }
