@@ -217,6 +217,44 @@
             }
         }
     }
+    
+    .popup {
+        &-wrapper {
+            width: 688px;
+        }
+        &-coffee {
+            &-info {
+                width: 326px;
+            }
+            &-settings {
+                &-item {
+                    &:not(:nth-child(-n + 3)) {
+                        margin-top: 0;
+                    }
+                    &:not(:nth-child(-n + 2)) {
+                        margin-top: 8px;
+                    }
+                    &:hover {
+                        .bg {
+                            opacity: 0;
+                        }
+                        .icon {
+                            background: #C1B6AD;
+                        }
+                        .name {
+                            color: #403F3D;
+                        }
+                    }
+                }
+            }
+            &__close {
+                &:hover {
+                    color: #665F55;
+                    background: transparent;
+                }
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 767px){
@@ -331,6 +369,53 @@
             &:not(:last-child) {
                 margin-right: 8px;
             }
+        }
+    }
+    
+    .popup {
+        padding: 0;
+        &-wrapper {
+            border-radius: unset;
+            width: 100%;
+            height: 100%;
+        }
+        &-coffee {
+            &-image {
+                display: none;
+            }
+            &-info {
+                width: 100%;
+            }
+            &-settings {
+                &-item {
+                    margin-bottom: 8px;
+                    &:not(:nth-child(-n + 2)) {
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: 380px){
+    .popup-coffee {
+        &-settings-item {
+            margin-bottom: 0;
+            &:not(:nth-child(-n + 2)) {
+                margin-top: 5px;
+            }
+        }
+        &-block {
+            margin-bottom: 14px;
+        }
+        &-total {
+            padding-bottom: 14px;
+        }
+        &__button {
+            padding: 8px;
+            font-size: 16px;
         }
     }
 }
