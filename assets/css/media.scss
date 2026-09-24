@@ -132,7 +132,7 @@
         }
         &:not(:nth-child(-n + 4)) {
             margin-top: 0;
-            display: none;
+       //     display: none;
         }
         &:not(:nth-child(-n + 2)) {
             margin-top: 40px;
@@ -142,10 +142,6 @@
             .card__descr {
                 margin-bottom: 38px;
             }
-        }
-        &-more {
-            margin: 40px auto 0 auto;
-            display: block;
         }
         &:hover {
             .card-image img {

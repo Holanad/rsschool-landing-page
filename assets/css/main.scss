@@ -142,6 +142,49 @@ body {
                 color: #E1D4C9;
             }
         }
+        .popup {
+            background: rgba(#292826, .8);
+            &-wrapper {
+                background: #403F3D;
+            }
+            &-coffee-settings-item {
+                border: 1px solid #665F55;
+                transition: all .2s ease-in;
+                .icon {
+                    background: #665F55;
+                }
+                input:checked {
+                    & ~ .icon {
+                        background: #403F3D;
+                    }
+                    & ~ .bg {
+                        background: #292826;
+                    }
+                    & ~ .name {
+                        color: #E1D4C9;
+                    }
+                }
+                &:hover {
+                    border: 1px solid #292826;
+                    .bg {
+                        background: #292826;
+                    }
+                    .icon {
+                        background: #403F3D;
+                    }
+                }
+            }
+        }
+        .card-more {
+            svg {
+                rect {
+                    stroke: #665F55;
+                }
+                path {
+                    stroke: #665F55;
+                }
+            }
+        }
     }
 }
 html {
@@ -816,7 +859,7 @@ html {
         margin-top: auto;
     }
     &-more {
-        display: none;
+        margin: 40px auto 0 auto;
     }
     &:hover {
         .card-image {
@@ -981,6 +1024,7 @@ html {
                 border: 1px solid #C1B6AD;
                 border-radius: 100px;
                 margin-right: 8px;
+                transition: all ease-in .2s;
                 position: relative;
                 overflow: hidden;
                 cursor: pointer;
@@ -1080,5 +1124,5 @@ html {
     }
 }
 .none {
-    display: none;
+    display: none !important;
 }
