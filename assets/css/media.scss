@@ -42,6 +42,11 @@
 
 
 @media screen and (max-width: 992px){
+    .header {
+        &-item:not(:last-child) {
+            margin-right: 20px;
+        }
+    }
     .intro {
         &-wrapper {
             padding: 100px 60px;
@@ -52,69 +57,6 @@
                 position: static;
                 margin-left: 10px;
                 opacity: 1;
-            }
-        }
-    }
-    .header {
-        &-block {
-            display: none;
-        }
-        &__menu {
-            display: none;
-            &:hover {
-                &::before {
-                    bottom: -8px;
-                    opacity: 0;
-                }
-            }
-        }
-        &-burger {
-            display: block;
-            span {
-                transition: all .2s linear;
-            }
-            &.open {
-                span {
-                    &:nth-child(1) {
-                        transform: rotate(45deg);
-                        top: 50%;
-                        left: 13px;
-                    }
-                    &:nth-child(2) {
-                        transform: rotate(-45deg);
-                        top: 50%;
-                        bottom: unset;
-                        left: 13px;
-                    }
-                }
-            }
-        }
-        &-item:not(:last-child) {
-            margin-right: 30px;
-        }
-        &-mobile {
-            overflow: auto;
-            background: #E1D4C9;
-            position: fixed;
-            padding: 60px 0;
-            z-index: 3;
-            bottom: 0;
-            align-items: center;
-            width: 100%;
-            height: calc(100% - 100px);
-            display: flex;
-            flex-direction: column;
-            right: -100%;
-            transition: all .3s linear;
-            &.open {
-                right: 0;
-                display: flex;
-            }
-        }
-        &:hover {
-            &::before {
-                bottom: -8px;
-                opacity: 0;
             }
         }
     }
@@ -190,7 +132,7 @@
         }
         &:not(:nth-child(-n + 4)) {
             margin-top: 0;
-            display: none;
+       //     display: none;
         }
         &:not(:nth-child(-n + 2)) {
             margin-top: 40px;
@@ -200,10 +142,6 @@
             .card__descr {
                 margin-bottom: 38px;
             }
-        }
-        &-more {
-            margin: 40px auto 0 auto;
-            display: block;
         }
         &:hover {
             .card-image img {
@@ -300,6 +238,70 @@
 @media screen and (max-width: 767px){
     .container {
         padding: 0 16px;
+    }
+    
+    .header {
+        &-block {
+            display: none;
+        }
+        &__menu {
+            display: none;
+            &:hover {
+                &::before {
+                    bottom: -8px;
+                    opacity: 0;
+                }
+            }
+        }
+        &-burger {
+            display: block;
+            span {
+                transition: all .2s linear;
+            }
+            &.open {
+                span {
+                    &:nth-child(1) {
+                        transform: rotate(45deg);
+                        top: 50%;
+                        left: 13px;
+                    }
+                    &:nth-child(2) {
+                        transform: rotate(-45deg);
+                        top: 50%;
+                        bottom: unset;
+                        left: 13px;
+                    }
+                }
+            }
+        }
+        &-item:not(:last-child) {
+            margin-right: 30px;
+        }
+        &:hover {
+            &::before {
+                bottom: -8px;
+                opacity: 0;
+            }
+        }
+        &-mobile {
+            overflow: auto;
+            background: #E1D4C9;
+            position: fixed;
+            padding: 60px 0;
+            z-index: 3;
+            bottom: 0;
+            align-items: center;
+            width: 100%;
+            height: calc(100% - 100px);
+            display: flex;
+            flex-direction: column;
+            right: -100%;
+            transition: all .3s linear;
+            &.open {
+                right: 0;
+                display: flex;
+            }
+        }
     }
     .intro {
         &-wrapper {
@@ -438,6 +440,11 @@
     }
 }
 
+@media screen and (max-width: 500px) {
+    .favorite-slider-wrapper {
+        width: 100%;
+    }
+}
 
 @media screen and (max-width: 380px){
     .popup-coffee {

@@ -78,7 +78,7 @@ body {
             }
             &-pagination span {
                 background: #665F55;
-                &.active {
+                b {
                     background: #C1B6AD;
                 }
             }
@@ -140,6 +140,49 @@ body {
             border: 1px solid #665F55;
             &__name {
                 color: #E1D4C9;
+            }
+        }
+        .popup {
+            background: rgba(#292826, .8);
+            &-wrapper {
+                background: #403F3D;
+            }
+            &-coffee-settings-item {
+                border: 1px solid #665F55;
+                transition: all .2s ease-in;
+                .icon {
+                    background: #665F55;
+                }
+                input:checked {
+                    & ~ .icon {
+                        background: #403F3D;
+                    }
+                    & ~ .bg {
+                        background: #292826;
+                    }
+                    & ~ .name {
+                        color: #E1D4C9;
+                    }
+                }
+                &:hover {
+                    border: 1px solid #292826;
+                    .bg {
+                        background: #292826;
+                    }
+                    .icon {
+                        background: #403F3D;
+                    }
+                }
+            }
+        }
+        .card-more {
+            svg {
+                rect {
+                    stroke: #665F55;
+                }
+                path {
+                    stroke: #665F55;
+                }
             }
         }
     }
@@ -497,7 +540,15 @@ html {
         }
     }
     &-item {
-        width: 480px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        transition: all .2s linear;
+        opacity: 0;
+        &.current {
+            opacity: 1;
+        }
         &__image {
             height: 480px;
             width: 100%;
@@ -528,6 +579,15 @@ html {
     }
     &-slider {
         position: relative;
+        &-wrapper {
+            width: 480px;
+            overflow: hidden;
+            transition: all .2s linear;
+            margin: 0 auto;
+        }
+        &-list {
+            position: relative;
+        }
     }
     &-pagination {
         margin-top: 40px;
@@ -537,11 +597,18 @@ html {
             border-radius: 100px;
             display: inline-block;
             background: #C1B6AD;
-            &.active {
-                background: #665F55;
-            }
+            position: relative;
+            overflow: hidden;
             &:not(:last-child) {
                 margin-right: 12px;
+            }
+            b {
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 0;
+                height: 100%;
+                background: #665F55;
             }
         }
     }
@@ -816,7 +883,7 @@ html {
         margin-top: auto;
     }
     &-more {
-        display: none;
+        margin: 40px auto 0 auto;
     }
     &:hover {
         .card-image {
@@ -981,6 +1048,7 @@ html {
                 border: 1px solid #C1B6AD;
                 border-radius: 100px;
                 margin-right: 8px;
+                transition: all ease-in .2s;
                 position: relative;
                 overflow: hidden;
                 cursor: pointer;
@@ -1080,5 +1148,5 @@ html {
     }
 }
 .none {
-    display: none;
+    display: none !important;
 }
