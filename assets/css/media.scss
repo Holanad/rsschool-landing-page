@@ -440,6 +440,11 @@
     }
 }
 
+@media screen and (max-width: 500px) {
+    .favorite-slider-wrapper {
+        width: 100%;
+    }
+}
 
 @media screen and (max-width: 380px){
     .popup-coffee {

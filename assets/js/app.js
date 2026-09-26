@@ -106,6 +106,10 @@ headerAdaptive();
 const coffieMenuSettings = () => {
 
     const tabsBtn = document.querySelectorAll('.tabs__button');
+    if (!tabsBtn.length) {
+        return;
+    }
+    
     let currentCardsShow = 0;
 
     const countLoadCards = {
@@ -129,7 +133,6 @@ const coffieMenuSettings = () => {
     .then(response => response.json())
     .then(jsonData => {
         dataCoffee = jsonData;
-
         loadCoffee();
         switchCategoryCoffee();
     });
@@ -321,3 +324,145 @@ const coffieMenuSettings = () => {
 
 }
 coffieMenuSettings()
+
+// slider index.hmtl
+
+const coffeeSliderMain = () => {
+    const sliderElem = document.querySelector('.favorite-slider');
+    const sliderSlideElems = sliderElem.querySelectorAll('.favorite-item');
+
+    
+    const adaptiveHeightSlider = (currentSlideElem = sliderElem.querySelector('.favorite-item.current').offsetHeight) => {
+        sliderElem.querySelector('.favorite-slider-wrapper').setAttribute('style', `height: ${currentSlideElem}px`);
+    }
+    adaptiveHeightSlider()
+    window.addEventListener('resize', () => {
+            adaptiveHeightSlider();
+    });
+
+    const panelSliderSettings = () => {
+        const sliderPanelNextElem = sliderElem.querySelector('.favorite-panel__next');
+        const sliderPanelPrevElem = sliderElem.querySelector('.favorite-panel__prev');
+        const sliderPanelPaginationElem = sliderElem.querySelector('.favorite-pagination');
+
+        const nextSlidePanelSettings = () => {
+            let nextSlide;
+            let numSlide;
+            sliderSlideElems.forEach((e, i) => {
+                if(e.classList.contains('current')) {
+                    if(e.nextElementSibling == null) {
+                        nextSlide = e.parentElement.firstElementChild;
+                        numSlide = 0;
+                    } else {
+                        nextSlide = e.nextElementSibling;
+                        numSlide = i + 1;
+                    }
+                    e.classList.remove('current');
+                }
+            })
+            nextSlide.classList.add('current');
+            adaptiveHeightSlider();
+            paginationPanelSettings(numSlide);
+                
+        }
+        sliderPanelNextElem.addEventListener('click', () => {
+            nextSlidePanelSettings();
+            restartAutoplay();
+        });
+
+        const prevSlidePanelSettings = () => {
+            let prevSlide;
+            let numSlide;
+            sliderSlideElems.forEach((e, i) => {
+                if(e.classList.contains('current')) {
+                    if(e.previousElementSibling == null) {
+                        prevSlide = e.parentElement.lastElementChild;
+                        numSlide = sliderSlideElems.length - 1;
+                    } else {
+                        prevSlide= e.previousElementSibling;
+                        numSlide = i - 1;
+                    }
+                    e.classList.remove('current');
+                }
+            })
+            prevSlide.classList.add('current');
+            adaptiveHeightSlider();
+            paginationPanelSettings(numSlide);
+        }
+        sliderPanelPrevElem.addEventListener('click', () => {
+            prevSlidePanelSettings();
+            restartAutoplay();
+        });
+
+        const paginationPanelSettings = (numSlide) => {
+            sliderPanelPaginationElem.querySelectorAll('span').forEach((e) => {
+                e.classList.remove('active');
+                e.querySelector('b').setAttribute('style', `width: 0%; transition: all 0s linear;`);
+            })
+            sliderPanelPaginationElem.querySelectorAll('span')[numSlide].classList.add('active');
+
+            setTimeout(() => {
+                sliderPanelPaginationElem.querySelectorAll('span')[numSlide].querySelector('b').setAttribute('style', `width: 100%; transition: all 3s linear`);
+            }, 10);
+        }
+        paginationPanelSettings(0);
+
+         const swipeSlider = () => {
+            let x1 = null;
+            let y1 = null;
+
+            const handleTouchStart = (e) => {
+                const firstTouch = e.touches[0];
+
+                x1 = firstTouch.clientX;
+                y1 = firstTouch.clientY;
+                restartAutoplay();
+            }
+            const handleTouchMove = (e) => {
+                if(!x1 || !y1) {
+                    return false;
+                }
+                let x2 = e.touches[0].clientX;
+                let y2 = e.touches[0].clientY;
+
+                let xDiff = x2 - x1;
+                let yDiff = y2 - y1;
+
+                if(Math.abs(xDiff) > Math.abs(yDiff)) {
+                    if(xDiff > 0) {
+                        prevSlidePanelSettings();
+
+                    } else {
+                        nextSlidePanelSettings();
+                    }
+                } else {
+                }
+                x1 = null;
+                y1 = null;
+
+            }
+
+            document.addEventListener('touchstart', handleTouchStart, false);          
+            document.addEventListener('touchmove', handleTouchMove, false);
+        }
+        swipeSlider();
+
+        let autoplayElem;
+        const timerAutoplay = 3000;
+        const startAutoplay = () => {
+            autoplayElem = setInterval(() => {
+                nextSlidePanelSettings();
+            }, timerAutoplay);
+        };
+        const restartAutoplay = () => {
+            clearInterval(autoplayElem);
+            startAutoplay(timerAutoplay);
+        };
+
+        startAutoplay();
+    }
+    panelSliderSettings()
+
+
+}
+coffeeSliderMain()
