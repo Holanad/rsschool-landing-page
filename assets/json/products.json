@@ -4,7 +4,7 @@
     "description": "Fragrant black coffee with Jameson Irish whiskey and whipped milk",
     "price": "7.00",
     "category": "coffee",
-    "image": "/assets/img/cards/coffie/coffee-1.png",
+    "image": "assets/img/cards/coffie/coffee-1.png",
     "sizes": {
       "s": {
         "size": "200 ml",
@@ -39,7 +39,7 @@
     "name": "Kahlua coffee",
     "description": "Classic coffee with milk and Kahlua liqueur under a cap of frothed milk",
     "price": "7.00",
-    "image": "/assets/img/cards/coffie/coffee-2.png",
+    "image": "assets/img/cards/coffie/coffee-2.png",
     "category": "coffee",
     "sizes": {
       "s": {
@@ -75,7 +75,7 @@
     "name": "Honey raf",
     "description": "Espresso with frothed milk, cream and aromatic honey",
     "price": "5.50",
-    "image": "/assets/img/cards/coffie/coffee-3.png",
+    "image": "assets/img/cards/coffie/coffee-3.png",
     "category": "coffee",
     "sizes": {
       "s": {
@@ -111,7 +111,7 @@
     "name": "Ice cappuccino",
     "description": "Cappuccino with soft thick foam in summer version with ice",
     "price": "5.00",
-    "image": "/assets/img/cards/coffie/coffee-4.png",
+    "image": "assets/img/cards/coffie/coffee-4.png",
     "category": "coffee",
     "sizes": {
       "s": {
@@ -147,7 +147,7 @@
     "name": "Espresso",
     "description": "Classic black coffee",
     "price": "4.50",
-    "image": "/assets/img/cards/coffie/coffee-5.png",
+    "image": "assets/img/cards/coffie/coffee-5.png",
     "category": "coffee",
     "sizes": {
       "s": {
@@ -183,7 +183,7 @@
     "name": "Latte",
     "description": "Espresso coffee with the addition of steamed milk and dense milk foam",
     "price": "5.50",
-    "image": "/assets/img/cards/coffie/coffee-6.png",
+    "image": "assets/img/cards/coffie/coffee-6.png",
     "category": "coffee",
     "sizes": {
       "s": {
@@ -219,7 +219,7 @@
     "name": "Latte macchiato",
     "description": "Espresso with frothed milk and chocolate",
     "price": "5.50",
-    "image": "/assets/img/cards/coffie/coffee-7.png",
+    "image": "assets/img/cards/coffie/coffee-7.png",
     "category": "coffee",
     "sizes": {
       "s": {
@@ -255,7 +255,7 @@
     "name": "Coffee with cognac",
     "description": "Fragrant black coffee with cognac and whipped cream",
     "price": "6.50",
-    "image": "/assets/img/cards/coffie/coffee-8.png",
+    "image": "assets/img/cards/coffie/coffee-8.png",
     "category": "coffee",
     "sizes": {
       "s": {
@@ -291,7 +291,7 @@
     "name": "Moroccan",
     "description": "Fragrant black tea with the addition of tangerine, cinnamon, honey, lemon and mint",
     "price": "4.50",
-    "image": "/assets/img/cards/tea/tea-1.png",
+    "image": "assets/img/cards/tea/tea-1.png",
     "category": "tea",
     "sizes": {
       "s": {
@@ -327,7 +327,7 @@
     "name": "Ginger",
     "description": "Original black tea with fresh ginger, lemon and honey",
     "price": "5.00",
-    "image": "/assets/img/cards/tea/tea-2.png",
+    "image": "assets/img/cards/tea/tea-2.png",
     "category": "tea",
     "sizes": {
       "s": {
@@ -363,7 +363,7 @@
     "name": "Cranberry",
     "description": "Invigorating black tea with cranberry and honey",
     "price": "5.00",
-    "image": "/assets/img/cards/tea/tea-3.png",
+    "image": "assets/img/cards/tea/tea-3.png",
     "category": "tea",
     "sizes": {
       "s": {
@@ -399,7 +399,7 @@
     "name": "Sea buckthorn",
     "description": "Toning sweet black tea with sea buckthorn, fresh thyme and cinnamon",
     "price": "5.50",
-    "image": "/assets/img/cards/tea/tea-4.png",
+    "image": "assets/img/cards/tea/tea-4.png",
     "category": "tea",
     "sizes": {
       "s": {
@@ -435,7 +435,7 @@
     "name": "Marble cheesecake",
     "description": "Philadelphia cheese with lemon zest on a light sponge cake and red currant jam",
     "price": "3.50",
-    "image": "/assets/img/cards/dessert/dessert-1.png",
+    "image": "assets/img/cards/dessert/dessert-1.png",
     "category": "dessert",
     "sizes": {
       "s": {
@@ -471,7 +471,7 @@
     "name": "Red velvet",
     "description": "Layer cake with cream cheese frosting",
     "price": "4.00",
-    "image": "/assets/img/cards/dessert/dessert-2.png",
+    "image": "assets/img/cards/dessert/dessert-2.png",
     "category": "dessert",
     "sizes": {
       "s": {
@@ -507,7 +507,7 @@
     "name": "Cheesecakes",
     "description": "Soft cottage cheese pancakes with sour cream and fresh berries and sprinkled with powdered sugar",
     "price": "4.50",
-    "image": "/assets/img/cards/dessert/dessert-3.png",
+    "image": "assets/img/cards/dessert/dessert-3.png",
     "category": "dessert",
     "sizes": {
       "s": {
@@ -543,7 +543,7 @@
     "name": "Creme brulee",
     "description": "Delicate creamy dessert in a caramel basket with wild berries",
     "price": "4.00",
-    "image": "/assets/img/cards/dessert/dessert-4.png",
+    "image": "assets/img/cards/dessert/dessert-4.png",
     "category": "dessert",
     "sizes": {
       "s": {
@@ -579,7 +579,7 @@
     "name": "Pancakes",
     "description": "Tender pancakes with strawberry jam and fresh strawberries",
     "price": "4.50",
-    "image": "/assets/img/cards/dessert/dessert-5.png",
+    "image": "assets/img/cards/dessert/dessert-5.png",
     "category": "dessert",
     "sizes": {
       "s": {
@@ -615,7 +615,7 @@
     "name": "Honey cake",
     "description": "Classic honey cake with delicate custard",
     "price": "4.50",
-    "image": "/assets/img/cards/dessert/dessert-6.png",
+    "image": "assets/img/cards/dessert/dessert-6.png",
     "category": "dessert",
     "sizes": {
       "s": {
@@ -651,7 +651,7 @@
     "name": "Chocolate cake",
     "description": "Cake with hot chocolate filling and nuts with dried apricots",
     "price": "5.50",
-    "image": "/assets/img/cards/dessert/dessert-7.png",
+    "image": "assets/img/cards/dessert/dessert-7.png",
     "category": "dessert",
     "sizes": {
       "s": {
@@ -687,7 +687,7 @@
     "name": "Black forest",
     "description": "A combination of thin sponge cake with cherry jam and light chocolate mousse",
     "price": "6.50",
-    "image": "/assets/img/cards/dessert/dessert-8.png",
+    "image": "assets/img/cards/dessert/dessert-8.png",
     "category": "dessert",
     "sizes": {
       "s": {
