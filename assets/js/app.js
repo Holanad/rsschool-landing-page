@@ -265,7 +265,7 @@ const coffieMenuSettings = () => {
                             Object.keys(dataCoffee[i].additives).forEach((elem) => {
                                 advitivesCoffee += `
                                     <label class="popup-coffee-settings-item f-center" data-dopprice="${Object.values(dataCoffee[i].additives[elem])[1]}">
-                                        <input type="radio" name="additives">
+                                        <input type="checkbox" name="additives">
                                         <span class="bg"></span>
                                         <span class="icon f-center-center">${Number(elem) + 1}</span>
                                         <span class="name">${Object.values(dataCoffee[i].additives[elem])[0]}</span>
